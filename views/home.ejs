@@ -3,9 +3,9 @@
 <h1>Home</h1>
 <p> <%= startingContent %> </p>
 
-<% for(var i=0; i<newPost.length; i++){ %>
-    <% console.log(newPost[i].title); %>
-<% }; %>
-
-
+<% newPost.forEach(function(newPost){ %>
+    <h1><%= newPost.title %></h1>
+    <p class="limited-text"><%= newPost.content %></p>
+<% }); %>
+    
 <%- include("./partials/footer") -%>
